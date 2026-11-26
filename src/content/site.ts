@@ -56,10 +56,31 @@ export const about = {
   image: "/images/hero/Anishhh.webp" ,
   imageAlt: "Anish Maheshwari at work",
   blocks: [
-    { label: "Biography", text: "[Professional biography, 80 to 100 words, supplied or approved by Anish.]" },
-    { label: "Personal introduction", text: "[Where he comes from and what drives him, 50 to 70 words.]" },
-    { label: "Entrepreneurial mindset", text: "[How he thinks about building businesses, 40 to 60 words.]" },
-    { label: "Leadership philosophy", text: "[How he leads teams and partners, 40 to 60 words.]" },
+    {
+      label: "Biography",
+      text:
+        "Anish Maheshwari is a business architect, entrepreneur, investor and strategic finance leader whose career spans more than 25 years across capital markets, institutional finance, enterprise transformation and business growth.\n\n" +
+        "Having progressed from operational finance to serving as Chief Financial Officer of a publicly listed enterprise, and subsequently becoming CEO and Managing Director of ViSURE Investment Affairs, he brings together financial stewardship, investment acumen and entrepreneurial leadership.\n\n" +
+        "His professional journey has been closely associated with high-value transactions, institutional fundraising, strategic capital deployment and business expansion initiatives. Today, he works alongside founders, investors, institutions and growth-stage enterprises to strengthen foundations, unlock capital and build enduring businesses.",
+    },
+    {
+      label: "Personal introduction",
+      text:
+        "For Anish, business has always been about more than financial outcomes. It is about recognising opportunities, creating possibilities and building something that delivers lasting value.\n\n" +
+        "His experience across corporate leadership and entrepreneurship has shaped a perspective that combines commercial understanding with a long-term vision for business growth.",
+    },
+    {
+      label: "Entrepreneurial mindset",
+      text:
+        "An entrepreneurial mindset is the ability to see possibilities beyond existing limitations. Anish believes in turning ambition into structured opportunities through strategic thinking, financial discipline and execution.\n\n" +
+        "His approach focuses on creating businesses that are resilient, scalable and capable of delivering sustainable value.",
+    },
+    {
+      label: "Leadership philosophy",
+      text:
+        "Great leadership is about creating direction, building trust and enabling people to achieve more together.\n\n" +
+        "Anish believes that successful enterprises are built through vision, discipline, accountability and the relentless pursuit of long-term value creation.",
+    },
   ],
 };
 
