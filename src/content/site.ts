@@ -53,7 +53,7 @@ export const hero = {
 export const about = {
   title: "The Man Behind the Vision",
   statement: ["Beyond Business.", "Driven by Vision."],
-  image: null as string | null, // e.g. "/images/about/anish-editorial.jpg" (4:5)
+  image: "/images/hero/Anishhh.webp" 
   imageAlt: "Anish Maheshwari at work",
   blocks: [
     { label: "Biography", text: "[Professional biography, 80 to 100 words, supplied or approved by Anish.]" },
