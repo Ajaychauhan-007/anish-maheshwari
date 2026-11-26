@@ -10,7 +10,8 @@ export function Nav() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.5);
+    // Hidden over the hero (it has its own navbar); slides in once the hero is scrolled past.
+    const onScroll = () => setScrolled(window.scrollY > window.innerHeight * 0.85);
     onScroll();
     window.addEventListener("scroll", onScroll, { passive: true });
 
@@ -34,7 +35,7 @@ export function Nav() {
 
   return (
     <>
-      <header className={`nav ${scrolled ? "is-scrolled" : ""}`}>
+      <header className={`nav ${scrolled ? "is-scrolled" : "is-hidden"}`} aria-hidden={!scrolled}>
         <div className="nav-shell" aria-hidden="true" />
         <a href="#home" className="nav-brand" aria-label={`${site.name}, back to top`}>ANISH MAHESHWARI</a>
         <nav aria-label="Primary">

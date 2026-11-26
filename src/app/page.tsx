@@ -2,7 +2,7 @@ import { Nav } from "@/components/Nav";
 import { Motion } from "@/components/Motion";
 import { VideoModal } from "@/components/VideoModal";
 import { Marquee } from "@/components/Marquee";
-import { Hero } from "@/components/sections/Hero";
+import { HeroElias } from "@/components/sections/HeroElias";
 import { About } from "@/components/sections/About";
 import { Glance } from "@/components/sections/Glance";
 import { Journey } from "@/components/sections/Journey";
@@ -22,7 +22,7 @@ export default function Home() {
       <Motion />
       <Nav />
       <main>
-        <Hero />
+        <HeroElias />
         <Marquee />
         <About />
         <Glance />

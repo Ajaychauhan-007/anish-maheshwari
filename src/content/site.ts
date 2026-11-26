@@ -43,7 +43,7 @@ export const nav = [
 export const hero = {
   intro:
     "[Short introduction, 1 to 2 sentences. Who Anish is and what he brings to founders, investors and businesses.]",
-  image: "/images/hero/Anishhh.webp",
+  image: "/images/hero/anish-cutout.png",
   imageAlt: "Portrait of Anish Maheshwari",
   primaryCta: { label: "Explore My Journey", href: "#journey" },
   secondaryCta: { label: "Watch My Story", youtubeId: null as string | null },

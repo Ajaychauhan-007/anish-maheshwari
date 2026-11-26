@@ -170,6 +170,8 @@ button { font: inherit; color: inherit; }
   opacity: 0; transform: translateY(-8px); transition: opacity .6s var(--ease), transform .6s var(--ease);
 }
 .nav.is-scrolled .nav-shell { opacity: 1; transform: none; }
+.nav { transition: padding .6s var(--ease), opacity .5s var(--ease), transform .6s var(--ease); }
+.nav.is-hidden { opacity: 0; transform: translateY(-100%); pointer-events: none; visibility: hidden; }
 .nav-brand { font-size: 13px; font-weight: 600; letter-spacing: 0.28em; color: var(--white); }
 .nav-links { display: flex; align-items: center; gap: clamp(18px, 2vw, 34px); list-style: none; margin: 0; padding: 0; }
 .nav-links a {
@@ -266,11 +268,14 @@ button { font: inherit; color: inherit; }
 
 /* ───────────────── 03 Glance ───────────────── */
 .stats { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); border-top: 1px solid rgba(247,246,242,.16); margin-top: clamp(56px, 6vw, 96px); }
-.stat { padding: clamp(28px, 3vw, 48px) clamp(16px, 2vw, 32px) 0; border-left: 1px solid rgba(247,246,242,.16); }
-.stat:first-child { border-left: 0; padding-left: 0; }
-.stat-num { font-size: clamp(64px, 8.4vw, 160px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; display: flex; align-items: flex-start; }
-.stat-num sup { font-size: .32em; color: var(--champagne); margin-top: .25em; margin-left: .06em; font-weight: 400; }
+.stat { padding: clamp(28px, 2.6vw, 44px) clamp(16px, 2vw, 32px); border-left: 1px solid rgba(247,246,242,.16); border-bottom: 1px solid rgba(247,246,242,.16); display: flex; flex-direction: column; }
+.stat:nth-child(4n+1) { border-left: 0; padding-left: 0; }
+.stat-num { font-size: clamp(52px, 5.2vw, 100px); font-weight: 300; letter-spacing: -0.05em; line-height: 1; display: flex; align-items: flex-start; white-space: nowrap; }
+.stat-prefix { font-size: .62em; margin-top: .12em; margin-right: .04em; color: var(--grey); letter-spacing: 0; }
+.stat-num sup { font-size: .4em; color: var(--champagne); margin-top: .18em; margin-left: .06em; font-weight: 400; }
 .stat-num.is-pending { color: rgba(247,246,242,.22); }
+.stat-unit { margin: 6px 0 0; font-size: clamp(20px, 1.6vw, 26px); line-height: 1; color: var(--champagne); }
+.stat-label { margin: auto 0 0; padding-top: 22px; max-width: 26ch; letter-spacing: .16em; line-height: 1.6; }
 
 /* ───────────────── 04 Journey ───────────────── */
 .journey { overflow: hidden; }
@@ -461,8 +466,9 @@ button { font: inherit; color: inherit; }
   .about-row { grid-template-columns: 1fr; gap: 14px; }
   .about-media, .insight-feature, .insight-list, .contact-info, .contact-form, .author-copy, .book-wrap { grid-column: 1 / -1; }
   .stats { grid-template-columns: 1fr 1fr; }
-  .stat:nth-child(3) { border-left: 0; padding-left: 0; }
-  .stat { padding-bottom: 32px; border-bottom: 1px solid rgba(247,246,242,.16); }
+  .stat:nth-child(4n+1) { border-left: 1px solid rgba(247,246,242,.16); padding-left: 16px; }
+  .stat:nth-child(odd) { border-left: 0; padding-left: 0; }
+  .stat-num { font-size: 11vw; }
   .journey-track { flex-direction: column; width: auto; padding-right: var(--gutter); }
   .journey-line { left: calc(var(--gutter) + 4px); right: auto; top: 0; bottom: 0; width: 1px; height: auto; }
   .chapter { width: auto; padding: 0 0 48px 40px; }
