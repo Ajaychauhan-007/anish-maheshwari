@@ -253,7 +253,7 @@ button { font: inherit; color: inherit; }
 .about-kicker { display: flex; gap: 12px; margin: 0 0 28px; color: #8a7350; }
 .about-kicker span, .about-row-label span { color: #8a7350; }
 .about-lead { margin: 0; font-family: var(--font-serif); font-size: clamp(28px, 2.5vw, 42px); line-height: 1.22; letter-spacing: -0.01em; color: var(--black); }
-.about-bio { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; max-width: 62ch; }
+.about-bio { margin-top: 36px; display: flex; flex-direction: column; gap: 20px; }
 .about-bio p { margin: 0; font-size: clamp(16px, 1.1vw, 18px); line-height: 1.75; color: var(--grey-dark); }
 .about-index { margin-top: clamp(64px, 6vw, 104px); border-top: 1px solid rgba(10,10,10,.16); }
 .about-row { display: grid; grid-template-columns: minmax(150px, 34%) 1fr; gap: 32px; padding: clamp(28px, 2.6vw, 40px) 0; border-bottom: 1px solid rgba(10,10,10,.16); position: relative; }
@@ -488,4 +488,12 @@ button { font: inherit; color: inherit; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; }
   .marquee-track { animation: none; }
+}
+
+/* About: justified text. Hyphenation keeps word gaps even in narrow columns. */
+.about-lead, .about-bio p, .about-row-text p {
+  text-align: justify;
+  text-align-last: left;
+  hyphens: auto;
+  -webkit-hyphens: auto;
 }

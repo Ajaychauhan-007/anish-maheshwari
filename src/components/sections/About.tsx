@@ -36,7 +36,7 @@ export function About() {
 
           <div className="about-text">
             <p className="label about-kicker" data-fade><span>01</span>{bio.label}</p>
-            <p className="about-lead" data-split>{lead}</p>
+            <p className="about-lead" data-fade>{lead}</p>
             <div className="about-bio" data-stagger>
               {bioRest.map((p, i) => <p key={i}>{p}</p>)}
             </div>
